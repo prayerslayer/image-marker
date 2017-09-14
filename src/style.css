@@ -1,0 +1,18 @@
+.img-marker-container {
+  position: relative;
+}
+
+.img-marker-container > img {
+  max-width: 100%;
+}
+
+.img-marker {
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid red;
+  transition: transform .2s ease-in-out;
+}
+
+.img-marker:hover {
+  transform: scale(1.1);
+}

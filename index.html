@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <script src="dist/image-marker.min.js"></script>
+  <link rel="stylesheet" href="dist/image-marker.min.css">
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const marker = new ImageMarker();
+      marker.registerMarkers();
+    });
+  </script>
+  <style>
+    .circle {
+      border-radius: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="img-marker-container">
+    <a
+      data-top="250"
+      data-left="250"
+      data-width="100"
+      data-height="100"
+      data-img="#image"
+      id="marker2"
+      href="http://example.com" class="img-marker circle"></a>
+    <a
+      data-top="500"
+      data-left="500"
+      data-width="100"
+      data-height="100"
+      data-img="#image"
+      id="marker1"
+      href="http://example.com" class="img-marker"></a>
+    <a
+      data-top="750"
+      data-left="500"
+      data-width="300"
+      data-height="100"
+      data-img="#image"
+      id="marker3"
+      href="http://example.com" class="img-marker"></a>
+    <img src="test.svg" id="image">
+  </div>
+</body>
+
+</html>
