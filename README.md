@@ -9,6 +9,10 @@ provided, extend at will), 1 line of Javascript and yeah okay lots of markup (se
 
 ![Screenshot showing some boxes with red, partially transparent overlays that perfectly matches the underlying shape.](screen.png)
 
+## Installation
+
+Please copy the files for now, eventually I may publish this properly to a free CDN like `unpkg.com`.
+
 ## Usage
 
 (For a full example see the [test page](index.html).)
@@ -43,7 +47,7 @@ const markerManager = new ImageMarker();
 markerManager.registerMarkers();
 ~~~
 
-# API
+### API
 
 Functions available on an ImageMarker instance:
 
@@ -52,10 +56,6 @@ Functions available on an ImageMarker instance:
 * `destroy`: Removes markers and event listeners. Cannot be undone.
 
 Aside from `destroy` all functions are safe to be called multiple times.
-
-# TODO
-
-* Possibly we can get rid of all the necessary IDs by looking at immediate children of the container?
 
 # Fair Warning
 
