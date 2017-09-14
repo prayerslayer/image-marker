@@ -1,5 +1,5 @@
 import { debounce, atLeast } from "./util";
-import './style.css';
+import "./style.css";
 
 export default class ImageMarker {
   constructor(
@@ -38,12 +38,11 @@ export default class ImageMarker {
       imgNode.naturalHeight
     );
 
-    if (img.markers.some(m => m.id === marker.id)) {
-      return;
+    if (!img.markers[marker.id]) {
+      img.markers[marker.id] = { id: marker.id };
     }
 
-    img.markers.push({
-      id: marker.id,
+    img.markers[marker.id] = Object.assign(img.markers[marker.id], {
       left: parseInt(data.left),
       top: parseInt(data.top),
       width: parseInt(data.width),
@@ -66,7 +65,8 @@ export default class ImageMarker {
       const currentWidth = imageNode.clientWidth;
       const currentHeight = imageNode.clientHeight;
 
-      image.markers.forEach(marker => {
+      Object.keys(image.markers).forEach(markerId => {
+        const marker = image.markers[markerId];
         const xFactor = currentWidth / image.width;
         const yFactor = currentHeight / image.height;
         const height = marker.cropHeight(marker.height * yFactor);
