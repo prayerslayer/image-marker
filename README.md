@@ -1,5 +1,12 @@
 # image-marker
 
+Sometimes you want clickable areas on images and think "yay, that's easy, we have this basically since forever". But
+hold on. You don't actually SEE the clickable area, so you don't know where to click or that you're able to click at
+all. The clickable area is also not responsive, and you can't control the position via CSS. Good luck with that.
+
+`image-marker` gives you some primitives to overlay nodes over your image. You need 2 CSS classes (basic styles are
+provided, extend at will), 1 line of Javascript and yeah okay lots of markup (see below).
+
 ![Screenshot showing some boxes with red, partially transparent overlays that perfectly matches the underlying shape.](screen.png)
 
 ## Usage
@@ -7,7 +14,7 @@
 (For a full example see the [test page](index.html).)
 
 ~~~ jade
-div.img-marker-positioner
+div.img-marker-container
   a.img-marker
   img
 ~~~
